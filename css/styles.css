@@ -366,6 +366,7 @@ body{
     padding: 5px 10px;
     border-radius: 20px;
     color: #007acc;
+    background: var(--color-background-8);
 }
 
 .card-config{    
@@ -396,7 +397,9 @@ body{
     margin-top: 10px;
 }
 
-.projects__card-description { 
+.projects__card-description {
+    display: flex;
+    width: 100%;
 }
 .projects__card-phone {
 }
@@ -833,8 +836,9 @@ body{
     padding: 10px;
     background: var(--color-background-8);
     border-radius: 15px;
-    color: var(--color-primary);
+    color: var(--color-background-2);
     transition: all .3s;
+    cursor: pointer;
 }
 
 .projects__file h3:hover{
@@ -875,6 +879,25 @@ body{
     box-shadow: var(--boxShadows-btn);
     font-size: 1rem;
     cursor: pointer;
+}
+
+.project__textarea{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 105%;
+}
+
+#form-description{
+    min-height: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    background: var(--color-background-8);
+    color: #000000;
 }
 
 .gg-close {
@@ -937,6 +960,12 @@ body{
     position: absolute;
     top: 12px;
     right: 45px;
+}
+
+.delete{
+    position: absolute;
+    top: 12px;
+    right: 10px;
 }
 
 .is-dark{    

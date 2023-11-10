@@ -85,9 +85,9 @@
                                             <option value="node">Node</option>
                                         </select>
                                     </div>
-                                    <div class="projects__input">
+                                    <div class="project__textarea">
                                         <label for="form-description">Description</label>                                
-                                        <textarea name="description" id="form-description" cols="30" rows="6"></textarea>
+                                        <textarea name="description" maxlength="120" id="form-description" rows="6"></textarea>
                                     </div>
                                     <div class="projects__input">
                                         <label for="form-phone">Phone</label>
@@ -100,7 +100,7 @@
                                         <label class="projects__file-label" for="form-image">
                                             <h3>Select</h3>  
                                             <img id="imgPreview" class="image-preview" width="300" height="200" alt="">
-                                            <input type="file" name="image" onchange="dateImage(event)" id="form-image">
+                                            <input type="file" name="image" id="form-image">
                                         </label>                                            
                                     </div>                                    
                                     <div class="projects__date">
@@ -177,6 +177,6 @@
         </section>
     </main>
 
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Proyectos</title>
+    <link rel="shortcut icon" href="img/logo-real.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="menu">
+        <nav class="menu__slider">
+            <a class="menu__logo" href="#"><img src="img/logo-real.png" alt="Logo de la pagina" width="32" height="32"></a>
+            <ul class="menu__lista">
+                <li class="menu__li"><a href="/">
+                    <img src="img/home-2.png" alt="" width="32" height="32">
+                    <span>Home</span>
+                </a></li>
+                <li class="menu__li"><a href="/">
+                    <img src="img/corazon.png" alt="" width="32" height="32">
+                    <span>Like</span>
+                </a></li>
+                <li class="menu__li"><a href="/">
+                    <img src="img/usuario.png" alt="" width="32" height="32">
+                    <span>Usser</span>
+                </a></li>
+                <li class="menu__li"><a href="/">
+                    <img src="img/pregunta.png" alt="" width="32" height="32">
+                    <span>Quest</span>
+                </a></li>
+                <li class="menu__li"><a href="/">
+                    <img src="img/configuraciones.png" alt="" width="32" height="32">
+                    <span>Config</span>
+                </a></li>
+                <li class="menu__li"><a href="/">
+                    <img src="/img/correo-electronico.png" alt="" width="32" height="32">
+                    <span>Contact</span>
+                </a></li>
+            </ul>
+            <a class="menu__close" href="#"><img src="img/salida.png" alt=""></a>
+        </nav>
+    </header>
+    <main class="main">        
+        <header class="main__header">
+            <div class="main__colum">
+                <button class="main__btn"><span class="main__navegation"></span></button>
+                <form action="">
+                <input class="main__search" type="search" placeholder="Search">
+            </form>
+            </div>
+            <div class="main__colum">
+                
+                <button class="main__ico content-active"><img src="img/campana.png" alt="campana" srcset="" width="32" height="32"></button>
+                <button class="main__ico content-active"><img src="img/calendario.png" alt="campana" srcset="" width="32" height="32"></button>
+                <div class="profile content-active">
+                    <img class="main__profile" src="img/profile.jpeg" alt="" width="32" height="32">
+                    <h3 class="main__profil-title">DavidCode <span></span></h3>
+                </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="projects">
+                <header class="projects__header">
+                    <h1>Projects</h1>
+                    <button id="create">Create Project</button>
+                    <div class="projescts__formulation">
+                        <form class="projects-form" action="">
+                        <span click="createProjects()" class="gg-close"></span>
+                            <h2>Enter Information</h2>
+                            <div class="form__container">
+                                <div class="form__col-1">
+                                    <div class="projects__input">
+                                        <label for="form-title">Title</label>
+                                        <input type="text" name="title" id="form-title">
+                                    </div>
+                                    <div class="projects__input">
+                                        <label for="form-technology">Technology</label>
+                                        <select name="technology" id="form-technology">
+                                            <option value="javaScript">Select</option>
+                                            <option value="javaScript">JavaScript</option>
+                                            <option value="next">Next</option>
+                                            <option value="react">React</option>
+                                            <option value="vue">Vue</option>
+                                            <option value="gatsby">Gatsby</option>
+                                            <option value="node">Node</option>
+                                        </select>
+                                    </div>
+                                    <div class="projects__input">
+                                        <label for="form-description">Description</label>                                
+                                        <textarea name="description" id="form-description" cols="30" rows="6"></textarea>
+                                    </div>
+                                    <div class="projects__input">
+                                        <label for="form-phone">Phone</label>
+                                        <input type="number" name="phone" id="form-phone">
+                                    </div>
+                                </div>
+                                <div class="form__col-2">
+                                    <div class="projects__file">                                        
+                                        <label for="form-image">Image</label>                                    
+                                        <label class="projects__file-label" for="form-image">
+                                            <h3>Select</h3>  
+                                            <img id="imgPreview" class="image-preview" width="300" height="200" alt="">
+                                            <input type="file" name="image" onchange="dateImage(event)" id="form-image">
+                                        </label>                                            
+                                    </div>                                    
+                                    <div class="projects__date">
+                                        <label for="form-date">Date</label>
+                                        <div class="date">
+                                            <input type="date" name="date" id="form-date">
+                                            <input type="time" name="time" id="form-time">
+                                        </div>
+                                    </div>
+                                    <div class="projects__progress">
+                                        <label for="form-progess">Progress</label>
+                                        <input type="range" value="25" min="0" max="100" id="form-progess" name="progess"/>                                    
+                                    </div>                                                   
+                                <input class="form__submit" type="submit" id="form-submit" >                          
+                                </div>
+                            </div>                                    
+                        </form>
+                    </div>
+                </header>
+                <div class="projects__container">
+                    <!-- <div class="projects__card">
+                        
+                    </div> -->
+                </div>
+            </div>
+            <div class="main__col-2">
+                <div class="graph">
+                    <div class="graph__select">
+                        <div class="graph__text">
+                            <h3>Graph</h3>
+                            <h2>David UX & UI</h2>
+                        </div>
+                        <div class="ico-desing"><img src="img/diseno-grafico.png" alt=""></div>
+                    </div>
+                    <div class="graph__graph">
+                        <div class="progress" style="--i:80">
+                            <h3 class="progess__title" id="progress-text">80<span>%</span></h3>
+                        </div>
+                    </div>
+                    <div class="graph__total">
+                        <h3 class="graph__total-title">Projects</h3>
+                        <div class="graph__container">
+                            <div class="graph__card">
+                                <h4>Total</h4>
+                                <h3 class="graph__card-number" id="total-card">38</h3>
+                            </div>
+                            <div class="graph__card">
+                                <h4>Finalizado</h4>
+                                <h3 class="graph__card-number" id="completed-card">21</h3>
+                            </div>
+                            <div class="graph__card">
+                                <h4>En progeso</h4>
+                                <h3 class="graph__card-number" id="progress-card">9</h3>
+                            </div>
+                            <div class="graph__card">
+                                <h4>Por comenzar</h4>
+                                <h3 class="graph__card-number" id="progess-waiting">8</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="graph__footer">                    
+                    <div class="graph__footer-tex">
+                        <p>Don't forget to Like</p>
+                    </div>
+                    <div class="dark__mode">
+                        <input class="dark-mode__check" type="checkbox" name="" id="dark-mode">
+                        <label class="dark-mode__btn" for="dark-mode"></label>
+                        <img class="darkmode-ico sol" src="img/solar.png" alt="sol">
+                        <img class="darkmode-ico luna" src="img/luna.png" alt="luna">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
